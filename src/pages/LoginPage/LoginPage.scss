@@ -11,8 +11,12 @@
         justify-content: center;
         align-items: center;
         width: 50%;
-        height: 100%;
-        margin: 20vw 0 20vw 0;
+        margin: 10% 0 0 0;
+        
+
+        &--select {
+            border-right: 0.1vw solid colors.$light-grey;
+        }
     }
 
     &__outer-button {
@@ -31,7 +35,23 @@
         color: colors.$alice-blue;
     }
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+        
+    }
 
+    &__input {
+        padding: 1vw;
+        border: none;
+        margin: 1.5vw;
+        font-size: 1vw;
+        text-transform: capitalize;
+        box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
+        border-radius: 1vw;
+    }
+
+    
 
 
 }
