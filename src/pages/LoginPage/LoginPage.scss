@@ -31,12 +31,29 @@
         }
     }
 
+    &__logo {
+        width: 5vw;
+        height: 5vw;
+
+        &--select {
+            width: 3vw;
+            height: 3vw;
+        }
+    }
+
     &__outer-button {
         display: flex;
+        align-items: center;
         background-color: colors.$chocolate-web;
         border-radius: 1vw;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        
+       &--select {
+        margin: 1vw;
+        padding: 0.3vw 1vw 0.3vw 1vw;
+       }
     }
+
 
     &__inner-button {
         border: none;
@@ -45,6 +62,12 @@
         font-weight: bolder;
         padding: 1vw;
         color: colors.$alice-blue;
+
+        &--select {
+            font-size: 1.5vw;
+        
+
+        }
     }
 
     &__form {
@@ -56,7 +79,7 @@
     &__input {
         padding: 1vw;
         border: none;
-        margin: 1.5vw;
+        margin: 1vw;
         font-size: 1vw;
         text-transform: capitalize;
         box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);

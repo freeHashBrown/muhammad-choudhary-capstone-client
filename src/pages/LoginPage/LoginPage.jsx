@@ -1,6 +1,7 @@
 import React from 'react';
 import "./LoginPage.scss";
 import googleLogo from "../../assets/icons/google-icon.png";
+import loginIcon from "../../assets/icons/login-icon.png";
 
 const LoginPage = () => {
     return (
@@ -18,6 +19,12 @@ const LoginPage = () => {
                     <form className='login-page__form'>
                         <input type="text" name="" id="" className='login-page__input' placeholder='username'/>
                         <input type="password" className='login-page__input' placeholder='password'/>
+                        <section className='login-page__outer-button login-page__outer-button--select'>
+                            <img src={loginIcon} alt="login" className='login-page__logo login-page__logo--select'/>
+                            <button className='login-page__inner-button login-page__inner-button--select'>
+                            Login
+                            </button>
+                        </section>
                     </form>
                 </article>
             </div>
