@@ -1,3 +1,6 @@
+@use "./colors";
+
+
 *, *::before, *::after {
     box-sizing: border-box;
     
@@ -6,6 +9,8 @@
 body, textarea {
     margin: 0;
     font-family: 'Helvetica Neue', "Arial Sans";
+    background-color: colors.$corn-silk;
+
 }
 
 a:link { 
