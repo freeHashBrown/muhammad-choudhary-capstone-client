@@ -24,7 +24,11 @@ const LoginPage = () => {
                             <button className='login-page__inner-button login-page__inner-button--select'>
                             Login
                             </button>
+                            
                         </section>
+                        <p className='login-page__text'>
+                            no account, sign up?
+                        </p>
                     </form>
                 </article>
             </div>
