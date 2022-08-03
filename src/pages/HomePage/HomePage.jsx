@@ -1,5 +1,8 @@
 import React from 'react';
 import "./HomePage.scss";
+import likeIcon from "../../assets/icons/like-icon.png";
+import commentIcon from "../../assets/icons/comment-icon.png";
+
 
 const HomePage = () => {
     return (
@@ -25,8 +28,8 @@ const HomePage = () => {
                     Et harum quidem rerum facilis est et expedita distinctio.
                     </p>
                     <div className='home-page__bottom'>
-                        <img src="" alt="comment" />
-                        <img src="" alt="like" />
+                        <img src={commentIcon} alt="comment" className='home-page__icon'/>
+                        <img src={likeIcon} alt="like" className='home-page__icon'/>
                     </div>
                 </section>
             </article>
