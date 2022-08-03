@@ -1,0 +1,68 @@
+@use '../../styles/partials/colors';
+@use "../../styles/partials/global";
+
+.comment-form {
+    position: fixed;
+    bottom: 1vw;
+    width: 75%;
+    left: 12.5%;
+    height: 20%;
+    background-color: colors.$flavescent;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.8);
+    border-radius: 1vw;
+    
+    &__main {
+        display: flex;
+        width: 100%;
+        padding: 1vw;
+        height: 100%;
+    }
+
+    &__top {
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.5vw;
+        resize: none;
+        margin: 0.5vw 0 0 0;
+        background-color: colors.$alice-blue;
+        height: 70%;
+        border-radius: 1vw;
+
+
+    }
+
+    &__title {
+        width: 100%;
+        padding: 0.5vw;
+        background-color: colors.$alice-blue;
+        border-radius: 1vw;
+    }
+
+    &__outer-button {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1vw;
+        background-color: colors.$chocolate-web;
+        border-radius: 1vw;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        height: 60%;
+    }
+
+    &__inner-button {
+        border: none;
+        background-color: unset;
+        padding: 0.5vw;
+        color: colors.$alice-blue;
+        font-weight: bold;
+
+    }
+
+    &__icon {
+        width: 3vw;
+        height: 3vw;
+    }
+
+}
