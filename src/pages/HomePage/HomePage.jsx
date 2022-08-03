@@ -3,16 +3,45 @@ import "./HomePage.scss";
 import likeIcon from "../../assets/icons/like-icon.png";
 import commentIcon from "../../assets/icons/comment-icon.png";
 
+import profileIcon from "../../assets/icons/profile-icon.png";
+import homeIcon from "../../assets/icons/homepage-icon.png";
+import messagesIcon from "../../assets/icons/messages-icon.png";
+import logoutIcon from "../../assets/icons/logout-icon.png";
+
+
 
 const HomePage = () => {
     return (
         <main className='home-page'>
-             <nav className='home-page__nav'>
-
+            <nav className='home-page__nav'>
+            <div className='home-page__item'>
+            <img src={homeIcon} alt="" className='home-page__icon'/>
+                    <p className='home-page__link'>
+                        Home
+                    </p>
+            </div>
+            <div className='home-page__item'>
+            <img src={messagesIcon} alt="" className='home-page__icon'/>
+                    <p className='home-page__link'>
+                        Message
+                    </p>
+            </div>
+            <div className='home-page__item'>
+            <img src={profileIcon} alt="" className='home-page__icon'/>
+                    <p className='home-page__link'>
+                        Profile
+                    </p>
+            </div>
+            <div className='home-page__item'>
+            <img src={logoutIcon} alt="" className='home-page__icon'/>
+                    <p className='home-page__link'>
+                        Log Out
+                    </p>
+            </div>
             </nav>
             <article className='home-page__main'>
                
-                <section className='home-page__post'>
+                {/* <section className='home-page__post'>
                     <div className='home-page__top'>
                         <p className='home-page__name'>
                             Muhammad
@@ -31,7 +60,7 @@ const HomePage = () => {
                         <img src={commentIcon} alt="comment" className='home-page__icon'/>
                         <img src={likeIcon} alt="like" className='home-page__icon'/>
                     </div>
-                </section>
+                </section> */}
             </article>
         </main>
     );
