@@ -5,6 +5,8 @@
     background-color: colors.$turquoise-green;
     display: flex;
     align-items: center;
+    padding-left: 0.5vw;
+
 
     &__title {
         color: colors.$text-color;
@@ -13,6 +15,8 @@
 
     &__logo {
         width: 4vw;
+        height: 4vw;
+
     }
 
     
