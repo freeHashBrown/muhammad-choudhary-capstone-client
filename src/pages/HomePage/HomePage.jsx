@@ -4,6 +4,7 @@ import likeIcon from "../../assets/icons/like-icon.png";
 import commentIcon from "../../assets/icons/comment-icon.png";
 
 import CommentForm from '../../component/CommentForm/CommentForm';
+import PostList from '../../component/PostList/PostList';
 
 import profileIcon from "../../assets/icons/profile-icon.png";
 import homeIcon from "../../assets/icons/homepage-icon.png";
@@ -42,6 +43,7 @@ const HomePage = () => {
             </div>
             </nav>
             <article className='home-page__main'>
+                <PostList/>
                 <CommentForm/>
                 {/* <section className='home-page__post'>
                     <div className='home-page__top'>
