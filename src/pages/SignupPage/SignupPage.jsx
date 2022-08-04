@@ -7,8 +7,8 @@ const SignupPage = () => {
         <main className='signup-page'>
           
             <form className='signup-page__form'>
-                <input type="text" placeholder='First Name' className='signup-page__input'/>
-                <input type="text" placeholder='Last Name' className='signup-page__input'/>
+                {/* <input type="text" placeholder='First Name' className='signup-page__input'/>
+                <input type="text" placeholder='Last Name' className='signup-page__input'/> */}
                 <input type="text" placeholder='Username' className='signup-page__input'/>
                 <input type="text" placeholder='Password' className='signup-page__input'/>
                 <input type="text" placeholder='Confirm Password' className='signup-page__input'/>
