@@ -1,10 +1,13 @@
-// @use '../../styles/partials/colors';
-// @use "../../styles/partials/global";
+@use '../../styles/partials/colors';
+@use "../../styles/partials/global";
 
 
 .post-list {
     display: flex;
     flex-direction: column;
-    box-shadow: none;
-   
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 5vw;
+    
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import "./HomePage.scss";
-import likeIcon from "../../assets/icons/like-icon.png";
-import commentIcon from "../../assets/icons/comment-icon.png";
+
 
 import CommentForm from '../../component/CommentForm/CommentForm';
 import PostList from '../../component/PostList/PostList';

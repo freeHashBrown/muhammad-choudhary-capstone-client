@@ -1,4 +1,7 @@
 import React from 'react';
+import "./PostItem.scss";
+import likeIcon from "../../assets/icons/like-icon.png";
+import commentIcon from "../../assets/icons/comment-icon.png";
 
 const PostItem = () => {
     return (
@@ -11,7 +14,7 @@ const PostItem = () => {
                     2022-08-04
                 </p>
             </div>
-            <div className='post-item__bottom'>
+            <div className='post-item__middle'>
                 <h1 className='post-item__title'>
                     This is the first post!
                 </h1>
@@ -22,6 +25,10 @@ const PostItem = () => {
                 cupiditate non provident, similique sunt in culpa qui officia deserunt 
                 mollitia animi, id est laborum et dolorum fuga. 
                 </p>
+            </div>
+            <div className='post-item__bottom'>
+                <img src={likeIcon} alt="like" className='post-item__icon'/>
+                <img src={commentIcon} alt="comment" className='post-item__icon'/>
             </div>
         </section>
     );
