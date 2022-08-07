@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./SignupPage.scss";
 import signupIcon from "../../assets/icons/signup-icon.png";
+import axios from "axios";
 
 const SignupPage = () => {
 
@@ -11,6 +12,7 @@ const SignupPage = () => {
 
     //Function for submitting username and password
     const handleSubmit = (event) => {
+        event.preventDefault();
         
 
         const form = event.target;
@@ -32,8 +34,23 @@ const SignupPage = () => {
         return;
         }
 
-        //Store all the values in hooks
-        
+        //Save the info in state
+        setUsername(username);
+        setPassword(password);
+
+        //Axios post
+        axios.post("http://localhost:8080/signup", 
+         {username: username,
+            password: password
+        },
+        {withCredentials: true})
+        .then(result => {
+            console.log(result);
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
 
 
 

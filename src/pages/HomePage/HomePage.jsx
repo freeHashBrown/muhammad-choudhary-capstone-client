@@ -34,12 +34,15 @@ const HomePage = () => {
                         Profile
                     </p>
             </div>
-            <div className='home-page__item'>
-            <img src={logoutIcon} alt="" className='home-page__icon'/>
+            <a href="http://localhost:8080/logout">
+                <div className='home-page__item'>
+                <img src={logoutIcon} alt="" className='home-page__icon'/>
                     <p className='home-page__link'>
                         Log Out
                     </p>
             </div>
+            </a>
+          
             </nav>
             <article className='home-page__main'>
                 <PostList/>
