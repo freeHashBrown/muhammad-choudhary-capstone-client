@@ -28,12 +28,15 @@ const HomePage = () => {
                         Message
                     </p>
             </div>
-            <div className='home-page__item'>
-            <img src={profileIcon} alt="" className='home-page__icon'/>
+            <a href="http://localhost:3000/profile">
+                <div className='home-page__item'>
+                <img src={profileIcon} alt="" className='home-page__icon'/>
                     <p className='home-page__link'>
                         Profile
                     </p>
             </div>
+            </a>
+           
             <a href="http://localhost:8080/logout">
                 <div className='home-page__item'>
                 <img src={logoutIcon} alt="" className='home-page__icon'/>
