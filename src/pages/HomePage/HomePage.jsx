@@ -14,6 +14,7 @@ const HomePage = () => {
     return (
         <main className='home-page'>
             <NavBar/>
+            <CommentForm/>
             
         </main>
     );
