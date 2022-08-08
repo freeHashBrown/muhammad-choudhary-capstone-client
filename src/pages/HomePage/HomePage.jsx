@@ -4,6 +4,7 @@ import "./HomePage.scss";
 
 import CommentForm from '../../component/CommentForm/CommentForm';
 import PostList from '../../component/PostList/PostList';
+import NavBar from '../../component/NavBar/NavBar';
 
 import profileIcon from "../../assets/icons/profile-icon.png";
 import homeIcon from "../../assets/icons/homepage-icon.png";
