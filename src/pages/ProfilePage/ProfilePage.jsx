@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import "./ProfilePage";
 import axios from 'axios';
+import NavBar from '../../component/NavBar/NavBar';
+
 
 class ProfilePage extends Component {
+
+    state = {
+
+        username: ""
+    
+      };
 
 
     componentDidMount() {
 
         axios
-        .get("http://localhost:8080/user", {credentials: 'include'})
+        .post("http://localhost:8080/login", {credentials: 'include'})
         .then(result => {
             console.log(result.data);
+            
         })
         .catch(err => {
             console.log(err);
@@ -18,11 +27,10 @@ class ProfilePage extends Component {
 
     }
 
-
-
     render() {
         return (
             <main>
+                <NavBar/>
                 <h1>
                     Hello 
                 </h1>

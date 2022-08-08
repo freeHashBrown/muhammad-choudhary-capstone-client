@@ -50,6 +50,7 @@ const LoginPage = () => {
 
             //Sending user to homepage if the login is succesfull
             if (result.data === 'Login Success') {
+                
                 history.push("/homepage");
             }
 

@@ -1,0 +1,39 @@
+@use '../../styles/partials/colors';
+@use "../../styles/partials/global";
+
+.nav {
+
+        display: flex;
+        justify-content: space-around;
+        background-color: colors.$flavescent;
+        box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.8);
+       
+        
+    
+
+    &__item {
+        display: flex;
+     
+        align-items: center;
+
+        background-color: colors.$chocolate-web;
+
+    }
+
+    &__icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    &__link {
+        font-size: 0.7vw;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: colors.$alice-blue;
+        padding: 0 1vw 0 0;
+    }
+
+
+
+
+}
