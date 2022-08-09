@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import "./SignupPage.scss";
 import signupIcon from "../../assets/icons/signup-icon.png";
 import axios from "axios";
+import { useHistory, Link } from 'react-router-dom';
+
 
 const SignupPage = () => {
 
     //Hooks to store values
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+     //Create history object to go to homepage
+     const history = useHistory();
 
 
     //Function for submitting username and password
@@ -46,6 +51,8 @@ const SignupPage = () => {
         {withCredentials: true})
         .then(result => {
             console.log(result);
+            history.push("/");
+
         })
         .catch(err => {
             console.log(err)

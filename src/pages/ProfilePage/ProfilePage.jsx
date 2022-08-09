@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import "./ProfilePage";
+import "./ProfilePage.scss";
 import axios from 'axios';
 import NavBar from '../../component/NavBar/NavBar';
+
+import ProfileList from '../../component/ProfileList/ProfileList';
 
 
 class ProfilePage extends Component {
 
     state = {
 
-        username: ""
+        username: "",
+        posts: []
     
       };
 
@@ -18,10 +21,23 @@ class ProfilePage extends Component {
         axios
         .get("http://localhost:8080/user", {withCredentials: true})
         .then(result => {
-            // console.log(result.data.id);
+            const userId = result.data.id;
             this.setState({
                 username: result.data.username
             })
+            
+
+            axios
+            .get(`http://localhost:8080/posts/${userId}`)
+            .then(result => {
+                this.setState({
+                    posts: result.data
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
 
             
         })
@@ -33,11 +49,13 @@ class ProfilePage extends Component {
 
     render() {
         return (
-            <main>
+            <main className='profile'>
                 <NavBar/>
-                <h1>
+                <h1 className='profile__title'>
                     Hello {this.state.username}
                 </h1>
+                <ProfileList posts={this.state.posts} username = {this.state.username}/>
+
             </main>
         );
     }

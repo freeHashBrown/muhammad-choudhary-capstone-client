@@ -34,14 +34,14 @@ class PostList extends Component {
         })
     }
 
-    updatePosts(newPosts) {
+    updatePosts = (newPosts) => {
 
         this.setState({
             posts: newPosts
         })
 
-
     }
+    
     
 
 

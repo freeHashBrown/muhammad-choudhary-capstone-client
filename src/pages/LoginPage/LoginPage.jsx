@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import "./LoginPage.scss";
 import googleLogo from "../../assets/icons/google-icon.png";
 import loginIcon from "../../assets/icons/login-icon.png";
@@ -83,9 +83,12 @@ const LoginPage = () => {
                             </button>
                             
                         </section>
-                        <p className='login-page__text'>
+                        <Link to={"/signup"}>
+                            <p className='login-page__text'>
                             no account, sign up?
-                        </p>
+                            </p>
+                        </Link>
+                       
                     </form>
                 </article>
             </div>

@@ -43,32 +43,36 @@ const CommentForm = ({updatePosts}) => {
             setUserId(result.data.id);
        
             console.log(title, content, result.data.id);
+
+              //Axios post
+            axios.post("http://localhost:8080/posts", 
+            {user_id: result.data.id,
+            title: title,
+            content: content
+            },
+            {withCredentials: true})
+            .then(result => {
+            console.log(result);
+
+                axios
+                .get("http://localhost:8080/posts")
+                .then(result => {
     
+               
+                    updatePosts(result.data);
+                })
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+            .catch(err => {
+            console.log(err)
+            })
         })
         .catch(err => {
             console.log(err);
         })
-
-         
-    
-        //Axios post
-        axios.post("http://localhost:8080/posts", 
-        {user_id: userIdHook,
-        title: titleHook,
-        content: contentHook
-        },
-        {withCredentials: true})
-        .then(result => {
-            console.log(result);
-            updatePosts(result);
-            })
-        .catch(err => {
-        console.log(err)
-        })
     }
-
-
-
 
     return (
         <article className='comment-form'>

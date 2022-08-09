@@ -1,0 +1,60 @@
+@use '../../styles/partials/colors';
+@use "../../styles/partials/global";
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    background-color: colors.$flavescent;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.8);
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        background-color: colors.$piggy-pink;
+        // background-color: colors.$turquoise-green;
+        padding: 1vw;
+        border-top-right-radius: 1vw;
+        border-top-left-radius: 1vw;
+    }
+
+    &__label {
+        margin: 0;
+        font-size: 0.7vw;
+        font-weight: bolder;
+    }
+
+    &__middle {
+        padding: 1vw;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1vw;
+    }
+
+    &__desc {
+        font-size: 1vw;
+        margin: 0.5vw 0 0 0;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        background-color: colors.$chocolate-web;
+        padding: 0.5vw;
+        border-bottom-right-radius: 1vw;
+        border-bottom-left-radius: 1vw;
+        
+    }
+
+    &__icon {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+}
