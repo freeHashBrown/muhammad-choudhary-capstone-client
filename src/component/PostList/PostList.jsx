@@ -32,7 +32,13 @@ class PostList extends Component {
         .catch(err => {
             console.log(err);
         })
+    }
 
+    updatePosts(newPosts) {
+
+        this.setState({
+            posts: newPosts
+        })
 
 
     }
@@ -52,7 +58,7 @@ class PostList extends Component {
                     })                    
                     }
 
-                    <CommentForm/>
+                    <CommentForm updatePosts={this.updatePosts}/>
             </article>
             );
         }
