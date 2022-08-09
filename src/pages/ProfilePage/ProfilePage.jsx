@@ -16,9 +16,13 @@ class ProfilePage extends Component {
     componentDidMount() {
 
         axios
-        .post("http://localhost:8080/login", {credentials: 'include'})
+        .get("http://localhost:8080/user", {withCredentials: true})
         .then(result => {
-            console.log(result.data);
+            // console.log(result.data.id);
+            this.setState({
+                username: result.data.username
+            })
+
             
         })
         .catch(err => {
@@ -32,7 +36,7 @@ class ProfilePage extends Component {
             <main>
                 <NavBar/>
                 <h1>
-                    Hello 
+                    Hello {this.state.username}
                 </h1>
             </main>
         );
