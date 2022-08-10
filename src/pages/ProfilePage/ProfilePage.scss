@@ -1,6 +1,9 @@
 .profile {
+    display: flex;
+    flex-direction: column;
+    
 
     &__title {
-        margin-left: 1vw;
+        align-self: center;
     }
 }

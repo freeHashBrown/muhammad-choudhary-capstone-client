@@ -8,6 +8,8 @@ import SignupPage from './pages/SignupPage/SignupPage';
 import HomePage from './pages/HomePage/HomePage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
+import DeletePost from './component/DeletePost/DeletePost';
+
 function App() {
 
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/signup" component={SignupPage}/>
           <Route path="/homepage" component={HomePage}/>
           <Route path="/profile" component={ProfilePage}/>
+          <Route path="/posts/:id" component={DeletePost}/>
         </Switch>
       </BrowserRouter>
    </div>

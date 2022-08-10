@@ -1,11 +1,16 @@
 import React from 'react';
 import "./ProfileItem.scss";
+import {Link} from "react-router-dom";
+
 
 
 import editIcon from "../../assets/icons/edit-icon.png";
 import deleteIcon from "../../assets/icons/delete-icon.png";
 
 const ProfileItem = ( {post, username} ) => {
+
+    // console.log(post);
+
     return (
         <section className='post-item'>
         <div className='post-item__top'>
@@ -25,8 +30,10 @@ const ProfileItem = ( {post, username} ) => {
             </p>
         </div>
         <div className='post-item__bottom'>
-            <img src={deleteIcon} alt="like" className='post-item__icon'/>
-            <img src={editIcon} alt="comment" className='post-item__icon'/>
+            <Link to={`/posts/${post.id}`}>
+                <img src={deleteIcon} alt="delete" className='post-item__icon'/>
+            </Link>
+            <img src={editIcon} alt="edit" className='post-item__icon'/>
         </div>
     </section>
     );
