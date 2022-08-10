@@ -60,6 +60,7 @@ const CommentForm = ({updatePosts}) => {
     
                
                     updatePosts(result.data);
+                    form.reset();
                 })
                 })
                 .catch(err => {
