@@ -9,8 +9,6 @@ import deleteIcon from "../../assets/icons/delete-icon.png";
 
 const ProfileItem = ( {post, username} ) => {
 
-    // console.log(post);
-
     return (
         <section className='post-item'>
         <div className='post-item__top'>

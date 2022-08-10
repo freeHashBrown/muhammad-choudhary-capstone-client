@@ -10,11 +10,6 @@ import axios from 'axios';
 const EditPost = (props) => {
 
 
-     //Hooks to store values
-    //  let [titleHook, setTitle] = useState("");
-    //  let [contentHook, setContent] = useState("");
-    //  let [userIdHook, setUserId] = useState(0);
-
     const history = useHistory();
 
     const handleSubmit = (e) => {
@@ -78,13 +73,8 @@ const EditPost = (props) => {
                          <img src={editIcon} alt="edit" className='edit-post__img' />
 
                     </button>
-
                 </section>
-
-
             </form>
-            
-
         </main>
     );
 };

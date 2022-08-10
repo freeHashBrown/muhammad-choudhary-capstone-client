@@ -38,8 +38,6 @@ class ProfilePage extends Component {
                 console.log(err);
             })
 
-
-            
         })
         .catch(err => {
             console.log(err);

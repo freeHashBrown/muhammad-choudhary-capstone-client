@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./SignupPage.scss";
 import signupIcon from "../../assets/icons/signup-icon.png";
 import axios from "axios";
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 const SignupPage = () => {
 
-    //Hooks to store values
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-
+    
      //Create history object to go to homepage
      const history = useHistory();
 
@@ -38,10 +35,6 @@ const SignupPage = () => {
         alert("Passwords must match");
         return;
         }
-
-        //Save the info in state
-        setUsername(username);
-        setPassword(password);
 
         //Axios post
         axios.post("http://localhost:8080/signup", 

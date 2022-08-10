@@ -63,9 +63,6 @@ class PostList extends Component {
             );
         }
 
-
-
-       
     }
 }
 

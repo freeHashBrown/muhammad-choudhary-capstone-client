@@ -5,13 +5,6 @@ import ProfileItem from '../ProfileItem/ProfileItem';
 
 
 class ProfileList extends Component {
-
-
-
-
-
-
-
     render() {
         if (this.props.posts === undefined){
             return <p>Loading...</p>
