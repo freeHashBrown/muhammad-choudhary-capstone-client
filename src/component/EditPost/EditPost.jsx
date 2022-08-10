@@ -4,6 +4,7 @@ import "./EditPost.scss";
 import editIcon from "../../assets/icons/edit-icon.png";
 import backIcon from "../../assets/icons/back-icon.png";
 import { useHistory, Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 const EditPost = (props) => {
@@ -14,6 +15,7 @@ const EditPost = (props) => {
     //  let [contentHook, setContent] = useState("");
     //  let [userIdHook, setUserId] = useState(0);
 
+    const history = useHistory();
 
     const handleSubmit = (e) => {
 
@@ -23,7 +25,7 @@ const EditPost = (props) => {
 
         const title = form.title.value;
         const content = form.content.value;
-        const id = props.match.params;
+        const id = props.match.params.id;
         console.log(id);
 
 
@@ -34,6 +36,21 @@ const EditPost = (props) => {
 
 
         //Make request to edit post
+        axios
+        .put(`http://localhost:8080/posts/${id}`, {
+            id: id,
+            title: title,
+            content: content
+        }, {
+            withCredentials: true
+        })
+        .then(result => {
+            history.push("/profile");
+            
+        })
+        .catch(err =>{
+            console.log(err);
+        })
         
 
     }
