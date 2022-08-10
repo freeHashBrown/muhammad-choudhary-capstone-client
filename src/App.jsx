@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage/HomePage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 import DeletePost from './component/DeletePost/DeletePost';
+import EditPost from './component/EditPost/EditPost';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Route path="/homepage" component={HomePage}/>
           <Route path="/profile" component={ProfilePage}/>
           <Route path="/posts/:id" component={DeletePost}/>
+          <Route path="/edit/:id" component={EditPost}/>
+
         </Switch>
       </BrowserRouter>
    </div>

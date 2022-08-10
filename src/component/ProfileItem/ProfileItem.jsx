@@ -33,7 +33,9 @@ const ProfileItem = ( {post, username} ) => {
             <Link to={`/posts/${post.id}`}>
                 <img src={deleteIcon} alt="delete" className='post-item__icon'/>
             </Link>
+            <Link to={`/edit/${post.id}`}>
             <img src={editIcon} alt="edit" className='post-item__icon'/>
+            </Link>
         </div>
     </section>
     );
