@@ -1,5 +1,5 @@
 
-# Learning Platform (Server)
+# Learning Platform (Client)
 
 An online learning platform that teachers could use to post lessons, 
 quizzes and assignments. 
